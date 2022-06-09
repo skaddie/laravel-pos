@@ -3,6 +3,12 @@
 @section('title', 'Open POS')
 
 @section('content')
-    <div id="cart" style="overflow-x:auto"></div>
+
+<style>
+    .user_cart{
+        overflow-x:auto;
+    }
+</style>
+    <div id="cart" ></div>
 
 @endsection
