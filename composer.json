@@ -60,6 +60,7 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-install-cmd": [
+            "ln -sr storage/app/public public/storage",
             "php artisan clear-compiled",
             "chmod -R 777 public/"
         ],
