@@ -7,6 +7,15 @@
 @endsection
 
 @section('content')
+
+<style>
+        @media(max-width: 600px) {
+        .responsive_table { 
+            font-size: 9px!important;
+            
+        }
+    }
+</style>
 <div class="card">
     <div class="card-body">
         <div class="row">
