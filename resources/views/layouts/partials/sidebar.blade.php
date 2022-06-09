@@ -4,7 +4,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{route('home')}}" class="brand-link">
-        <i class="fa-solid fa-cash-register"  style="opacity: .8; color:white; font-size: 0.9rem;"></i>
+        <i class="fa-solid fa-cash-register"  style="opacity: .8; color:white; font-size: 0.9rem; padding-left: 1.1rem;"></i>
         <span class="brand-text font-weight-light">{{ config('app.name') }}</span>
     </a>
 
