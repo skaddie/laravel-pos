@@ -36,8 +36,8 @@
                 </form>
             </div>
         </div>
-        <table class="table">
-            <thead class="responsive_table">
+        <table class="table responsive_table">
+            <thead>
                 <tr>
                     <th>ID</th>
                     <th>Customer Name</th>
