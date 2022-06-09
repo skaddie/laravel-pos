@@ -69615,7 +69615,7 @@ var Cart = /*#__PURE__*/function (_Component) {
         input: 'text',
         inputValue: this.getTotal(this.state.cart),
         showCancelButton: true,
-        confirmButtonText: 'Send',
+        confirmButtonText: 'Save',
         showLoaderOnConfirm: true,
         preConfirm: function preConfirm(amount) {
           return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('/admin/orders', {
@@ -69676,7 +69676,7 @@ var Cart = /*#__PURE__*/function (_Component) {
           value: cus.id
         }, "".concat(cus.first_name, " ").concat(cus.last_name));
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "user-cart"
+        className: "user-cart user_cart"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "card"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
