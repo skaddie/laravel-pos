@@ -16967,7 +16967,7 @@ a.text-dark:focus {
   max-height: 70px;
 }
 
-    @media screen and (max-width: 600px) {
+    @media(max-width: 600px) {
         .responsive_table { 
             font-size: 9px!important;
             
