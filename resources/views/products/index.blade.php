@@ -10,7 +10,7 @@
 @endsection
 @section('content')
 <div class="card product-list">
-    <div class="card-body">
+    <div class="card-body" style="overflow-x:auto">
         <table class="table">
             <thead>
                 <tr>

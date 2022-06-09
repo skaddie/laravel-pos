@@ -9,17 +9,10 @@
     <link rel="stylesheet" href="{{ asset('plugins/sweetalert2/sweetalert2.min.css') }}">
 @endsection
 @section('content')
-<style>
-        @media(max-width: 600px) {
-        .responsive_table { 
-            font-size: 9px!important;
-            
-        }
-    }
-</style>
+
     <div class="card">
-        <div class="card-body">
-            <table class="table responsive_table">
+        <div class="card-body" style="overflow-x:auto">
+            <table class="table responsive_table ">
                 <thead>
                 <tr>
                     <th>ID</th>

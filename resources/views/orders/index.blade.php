@@ -8,16 +8,9 @@
 
 @section('content')
 
-<style>
-        @media(max-width: 600px) {
-        .responsive_table { 
-            font-size: 9px!important;
-            
-        }
-    }
-</style>
+
 <div class="card">
-    <div class="card-body">
+    <div class="card-body" style="overflow-x:auto">
         <div class="row">
             <div class="col-md-7"></div>
             <div class="col-md-5">
