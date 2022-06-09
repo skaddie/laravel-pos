@@ -28,7 +28,7 @@
             </div>
         </div>
         <table class="table">
-            <thead>
+            <thead class="responsive_table">
                 <tr>
                     <th>ID</th>
                     <th>Customer Name</th>

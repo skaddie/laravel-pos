@@ -49,3 +49,11 @@
         max-height: 70px;
     }
 }
+.responsive_table{
+    @media screen and (max-width: 600px) {
+        .newtag { 
+            font-size: 9px!important;
+            ;
+        }
+    }
+}
