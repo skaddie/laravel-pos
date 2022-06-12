@@ -67,9 +67,20 @@
             <tfoot>
                 <tr>
                     <th></th>
-                    <th></th>
+                    <th>Total Income:</th>
                     <th>{{ config('settings.currency_symbol') }} {{ number_format($total, 2) }}</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tfoot>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th>Total Received Amount</th>
                     <th>{{ config('settings.currency_symbol') }} {{ number_format($receivedAmount, 2) }}</th>
+                    <th></th>
                     <th></th>
                     <th></th>
                     <th></th>
