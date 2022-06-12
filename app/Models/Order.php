@@ -40,12 +40,20 @@ class Order extends Model
             return $i->price;
         })->sum();
     }
-
+    public function cost()
+    {
+        return $this->items->map(function ($i){
+            return $i->cost;
+        })->sum();
+    }
     public function formattedTotal()
     {
         return number_format($this->total(), 2);
     }
-
+    public function formattedCost()
+    {
+        return number_format($this->cost(), 2);
+    }
     public function receivedAmount()
     {
         return $this->payments->map(function ($i){

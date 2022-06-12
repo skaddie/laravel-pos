@@ -30,22 +30,13 @@
             </div>
         </div>
         <table class="table responsive_table">
-             <tfoot>
-                <tr>
-                    <th></th>
-                    <th>Total Received Amount</th>
-                    <th>{{ config('settings.currency_symbol') }} {{ number_format($receivedAmount, 2) }}</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </tfoot>
+
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Customer Name</th>
-                    <th>Total</th>
+                    <th>Price</th>
+                    <th>Cost</th>
                     <th>Received Amount</th>
                     <th>Status</th>
                     <th>To Pay</th>
@@ -58,6 +49,7 @@
                     <td>{{$order->id}}</td>
                     <td>{{$order->getCustomerName()}}</td>
                     <td>{{ config('settings.currency_symbol') }} {{$order->formattedTotal()}}</td>
+                    <td>{{ config('settings.currency_symbol') }} {{$order->formattedCost()}}</td>
                     <td>{{ config('settings.currency_symbol') }} {{$order->formattedReceivedAmount()}}</td>
                     <td>
                         @if($order->receivedAmount() == 0)
@@ -78,7 +70,7 @@
             <tfoot>
                 <tr>
                     <th></th>
-                    <th>Total Income:</th>
+                    <th>Total To Recieved Amount:</th>
                     <th>{{ config('settings.currency_symbol') }} {{ number_format($total, 2) }}</th>
                     <th></th>
                     <th></th>
@@ -87,6 +79,39 @@
                 </tr>
             </tfoot>
 
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th>Total Received Amount:</th>
+                    <th>{{ config('settings.currency_symbol') }} {{ number_format($receivedAmount, 2) }}</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tfoot>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th>Total Income:</th>
+                    <th>{{ config('settings.currency_symbol') }} {{ number_format($income, 2) }}</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tfoot>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th>Total Profit</th>
+                    <th>{{ config('settings.currency_symbol') }} {{ number_format($cost, 2) }}</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tfoot>
         </table>
         {{ $orders->render() }}
     </div>

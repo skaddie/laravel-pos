@@ -21,11 +21,14 @@ class OrderController extends Controller
         $total = $orders->map(function($i) {
             return $i->total();
         })->sum();
+        $cost = $orders->map(function($i) {
+            return $i->cost();
+        })->sum();
         $receivedAmount = $orders->map(function($i) {
             return $i->receivedAmount();
         })->sum();
 
-        return view('orders.index', compact('orders', 'total', 'receivedAmount'));
+        return view('orders.index', compact('orders', 'total', 'cost', 'receivedAmount'));
     }
 
     public function store(OrderStoreRequest $request)
@@ -39,6 +42,7 @@ class OrderController extends Controller
         foreach ($cart as $item) {
             $order->items()->create([
                 'price' => $item->price * $item->pivot->quantity,
+                'cost' => $item->cost * $item->pivot->quantity,
                 'quantity' => $item->pivot->quantity,
                 'product_id' => $item->id,
             ]);
