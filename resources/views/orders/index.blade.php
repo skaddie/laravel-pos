@@ -30,6 +30,17 @@
             </div>
         </div>
         <table class="table responsive_table">
+             <tfoot>
+                <tr>
+                    <th></th>
+                    <th>Total Received Amount</th>
+                    <th>{{ config('settings.currency_symbol') }} {{ number_format($receivedAmount, 2) }}</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tfoot>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -75,17 +86,7 @@
                     <th></th>
                 </tr>
             </tfoot>
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th>Total Received Amount</th>
-                    <th>{{ config('settings.currency_symbol') }} {{ number_format($receivedAmount, 2) }}</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </tfoot>
+
         </table>
         {{ $orders->render() }}
     </div>
