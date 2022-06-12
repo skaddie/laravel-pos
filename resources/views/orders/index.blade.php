@@ -16,11 +16,13 @@
         
     }
     @media screen and (max-width: 600px) {
-    .hide {
-        background-color: olive;
+    .hide_responsive {
         white-space: nowrap;
         font-size: 0.35rem;
-    }
+        }
+    .table th{
+        font-size: 0.55rem;
+        }    
     }
 </style>
 <div class="card">
@@ -83,40 +85,40 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <th></th>
-                    <th>Total Price:</th>
-                    <th>{{ config('settings.currency_symbol') }} {{ number_format($total, 2) }}</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th class="hide_responsive"></th>
+                    <th class="hide_responsive">Total Price:</th>
+                    <th class="hide_responsive">{{ config('settings.currency_symbol') }} {{ number_format($total, 2) }}</th>
+                    <th class="hide_responsive"></th>
+                    <th class="hide_responsive"></th>
+                    <th class="hide_responsive"></th>
+                    <th class="hide_responsive"></th>
                 </tr>
                 <tr>
-                    <th class="hide"></th>
-                    <th class="hide">Total Received Amount:</th>
-                    <th class="hide">{{ config('settings.currency_symbol') }} {{ number_format($receivedAmount, 2) }}</th>
-                    <th class="hide"></th>
-                    <th class="hide"></th>
-                    <th class="hide"></th>
-                    <th class="hide"></th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive">Total Received Amount:</th>
+                    <th class="hide hide_responsive">{{ config('settings.currency_symbol') }} {{ number_format($receivedAmount, 2) }}</th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive"></th>
                 </tr>
                 <tr>
-                    <th class="hide"></th>
-                    <th class="hide">Total Income:</th>
-                    <th class="hide">{{ config('settings.currency_symbol') }} {{ number_format($Income, 2) }}</th>
-                    <th class="hide"></th>
-                    <th class="hide"></th>
-                    <th class="hide"></th>
-                    <th class="hide"></th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive">Total Income:</th>
+                    <th class="hide hide_responsive">{{ config('settings.currency_symbol') }} {{ number_format($Income, 2) }}</th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive"></th>
                 </tr>
                 <tr>
-                    <th class="hide"></th>
-                    <th class="hide">Total Profit</th>
-                    <th class="hide">{{ config('settings.currency_symbol') }} {{ number_format($cost, 2) }}</th>
-                    <th class="hide"></th>
-                    <th class="hide"></th>
-                    <th class="hide"></th>
-                    <th class="hide"></th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive">Total Profit</th>
+                    <th class="hide hide_responsive">{{ config('settings.currency_symbol') }} {{ number_format($cost, 2) }}</th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive"></th>
+                    <th class="hide hide_responsive"></th>
                 </tr>
             </tfoot>
 
