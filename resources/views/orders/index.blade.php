@@ -18,11 +18,8 @@
     @media screen and (max-width: 600px) {
     .hide_responsive {
         white-space: nowrap;
-        font-size: 0.35rem;
         }
-    .table th{
-        font-size: 0.55rem;
-        }    
+
     }
 </style>
 <div class="card">

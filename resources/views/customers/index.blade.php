@@ -9,7 +9,15 @@
     <link rel="stylesheet" href="{{ asset('plugins/sweetalert2/sweetalert2.min.css') }}">
 @endsection
 @section('content')
+<style>
 
+    @media screen and (max-width: 600px) {
+    .hide_responsive {
+        white-space: nowrap;
+        }
+
+    }
+</style>
     <div class="card">
         <div class="card-body" style="overflow-x:auto">
             <table class="table responsive_table ">
@@ -29,17 +37,17 @@
                 <tbody>
                 @foreach ($customers as $customer)
                     <tr>
-                        <td>{{$customer->id}}</td>
-                        <td>
+                        <td class="hide_responsive">{{$customer->id}}</td>
+                        <td class="hide_responsive">
                             <img width="50" src="{{$customer->getAvatarUrl()}}" alt="">
                         </td>
-                        <td>{{$customer->first_name}}</td>
-                        <td>{{$customer->last_name}}</td>
-                        <td>{{$customer->email}}</td>
-                        <td>{{$customer->phone}}</td>
-                        <td>{{$customer->address}}</td>
-                        <td>{{$customer->created_at}}</td>
-                        <td>
+                        <td class="hide_responsive">{{$customer->first_name}}</td>
+                        <td class="hide_responsive">{{$customer->last_name}}</td>
+                        <td class="hide_responsive">{{$customer->email}}</td>
+                        <td class="hide_responsive">{{$customer->phone}}</td>
+                        <td class="hide_responsive">{{$customer->address}}</td>
+                        <td class="hide_responsive">{{$customer->created_at}}</td>
+                        <td class="hide_responsive">
                             <a href="{{ route('customers.edit', $customer) }}" class="btn btn-primary"><i
                                     class="fas fa-edit"></i></a>
                             <button class="btn btn-danger btn-delete" data-url="{{route('customers.destroy', $customer)}}"><i

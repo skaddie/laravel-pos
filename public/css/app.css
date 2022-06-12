@@ -16967,3 +16967,8 @@ a.text-dark:focus {
   max-height: 70px;
 }
 
+@media screen and (max-width: 600px) {
+  html {
+      font-size: 0.7rem;
+    }
+}
