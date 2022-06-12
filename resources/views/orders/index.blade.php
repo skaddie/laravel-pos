@@ -13,6 +13,7 @@
 <style>
     .hide{
         border-top: 1px solid #dee2e600!important;
+        white-space: nowrap;
     }
 </style>
 <div class="card">
