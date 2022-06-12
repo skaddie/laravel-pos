@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="app_description">App description</label>
+                    <label for="app_description">App sub_name</label>
                     <textarea name="app_description" class="form-control @error('app_description') is-invalid @enderror" id="app_description"
                               placeholder="App description">{{ old('app_description', config('settings.app_description')) }}</textarea>
                     @error('app_description')

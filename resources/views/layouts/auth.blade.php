@@ -13,12 +13,22 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     @yield('css')
+    <style>
+        .sub_title{
+            font-size:0.9rem;
+        }
+        .login-logo{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
             <a href="../../index2.html">{{ config('app.name') }}</a>
+            <a href="javascript:void(0)" class="sub_title">{{ config('settings.app_description') }}</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
