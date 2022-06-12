@@ -36,6 +36,9 @@ class HomeController extends Controller
                 }
                 return $i->receivedAmount();
             })->sum(),
+            'profit' => $orders->map(function($i) {
+                return $i->cost();
+            })->sum(),
             'income_today' => $orders->where('created_at', '>=', date('Y-m-d').' 00:00:00')->map(function($i) {
                 if($i->receivedAmount() > $i->total()) {
                     return $i->total();

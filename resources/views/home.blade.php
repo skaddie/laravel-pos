@@ -33,6 +33,20 @@
             </div>
           </div>
           <!-- ./col -->
+           <div class="col-lg-3 ">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                  <h3>{{config('settings.currency_symbol')}} {{number_format($profit, 2)}}</h3>
+                <p>Profit</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="{{route('orders.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
           <div class="col-lg-3 ">
             <!-- small box -->
             <div class="small-box bg-danger">
@@ -50,7 +64,7 @@
           <!-- ./col -->
           <div class="col-lg-3 ">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-dark">
               <div class="inner">
                 <h3>{{$customers_count}}</h3>
 
