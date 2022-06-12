@@ -59,6 +59,7 @@ class ProductController extends Controller
             'image' => $image_path,
             'barcode' => $request->barcode,
             'price' => $request->price,
+            'cost' => $request->cost,
             'quantity' => $request->quantity,
             'status' => $request->status
         ]);

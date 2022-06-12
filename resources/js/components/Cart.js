@@ -101,6 +101,10 @@ class Cart extends Component {
         const total = cart.map(c => c.pivot.quantity * c.price);
         return sum(total).toFixed(2);
     }
+    getCost(cart) {
+        const cost = cart.map(c => c.pivot.quantity * c.cost);
+        return sum(cost).toFixed(2);
+    }
     handleClickDelete(product_id) {
         axios
             .post("/admin/cart/delete", { product_id, _method: "DELETE" })

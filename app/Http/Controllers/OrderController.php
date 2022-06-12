@@ -27,8 +27,13 @@ class OrderController extends Controller
         $receivedAmount = $orders->map(function($i) {
             return $i->receivedAmount();
         })->sum();
-
-        return view('orders.index', compact('orders', 'total', 'cost', 'receivedAmount'));
+        $Income = $orders->map(function($i) {
+            if($i->receivedAmount() > $i->total()) {
+                return $i->total();
+            }
+            return $i->receivedAmount();
+        })->sum();
+        return view('orders.index', compact('orders', 'total', 'cost', 'Income', 'receivedAmount'));
     }
 
     public function store(OrderStoreRequest $request)

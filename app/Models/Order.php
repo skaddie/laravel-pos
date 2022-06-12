@@ -65,4 +65,20 @@ class Order extends Model
     {
         return number_format($this->receivedAmount(), 2);
     }
+
+
+    public function Income()
+    {
+        return $this -> $orders->map(function($i) {
+            if($i->receivedAmount() > $i->total()) {
+                return $i->total();
+            }
+            return $i->receivedAmount();
+        })->sum();
+    }
+    public function formattedIncome()
+    {
+        return number_format($this->Income(), 2);
+    }
+
 }

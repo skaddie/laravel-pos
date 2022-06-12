@@ -2,13 +2,19 @@
 
 @section('title', 'Orders List')
 @section('content-header', 'Order List')
+@section('content-header', 'Dashboard')
+
 @section('content-actions')
     <a href="{{route('cart.index')}}" class="btn btn-primary">Open POS</a>
 @endsection
 
 @section('content')
 
-
+<style>
+    .hide{
+        border-top: 1px solid #dee2e600!important;
+    }
+</style>
 <div class="card">
     <div class="card-body" style="overflow-x:auto">
         <div class="row">
@@ -70,48 +76,42 @@
             <tfoot>
                 <tr>
                     <th></th>
-                    <th>Total To Recieved Amount:</th>
+                    <th>Total Price:</th>
                     <th>{{ config('settings.currency_symbol') }} {{ number_format($total, 2) }}</th>
                     <th></th>
                     <th></th>
                     <th></th>
                     <th></th>
                 </tr>
+                <tr>
+                    <th class="hide"></th>
+                    <th class="hide">Total Received Amount:</th>
+                    <th class="hide">{{ config('settings.currency_symbol') }} {{ number_format($receivedAmount, 2) }}</th>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                </tr>
+                <tr>
+                    <th class="hide"></th>
+                    <th class="hide">Total Income:</th>
+                    <th class="hide">{{ config('settings.currency_symbol') }} {{ number_format($Income, 2) }}</th>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                </tr>
+                <tr>
+                    <th class="hide"></th>
+                    <th class="hide">Total Profit</th>
+                    <th class="hide">{{ config('settings.currency_symbol') }} {{ number_format($cost, 2) }}</th>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                    <th class="hide"></th>
+                </tr>
             </tfoot>
 
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th>Total Received Amount:</th>
-                    <th>{{ config('settings.currency_symbol') }} {{ number_format($receivedAmount, 2) }}</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </tfoot>
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th>Total Income:</th>
-                    <th>{{ config('settings.currency_symbol') }} {{ number_format($income, 2) }}</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </tfoot>
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th>Total Profit</th>
-                    <th>{{ config('settings.currency_symbol') }} {{ number_format($cost, 2) }}</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </tfoot>
         </table>
         {{ $orders->render() }}
     </div>

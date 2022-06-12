@@ -16,11 +16,17 @@ return new class extends Migration
         Schema::table('order_items', function (Blueprint $table) {
             $table->decimal('price', 14, 4)->change();
         });
+        Schema::table('order_items', function (Blueprint $table) {
+            $table->decimal('cost', 14, 4)->change();
+        });
         Schema::table('payments', function (Blueprint $table) {
             $table->decimal('amount', 14, 4)->change();
         });
         Schema::table('products', function (Blueprint $table) {
             $table->decimal('price', 14, 2)->change();
+        });
+        Schema::table('products', function (Blueprint $table) {
+            $table->decimal('cost', 14, 2)->change();
         });
     }
 
