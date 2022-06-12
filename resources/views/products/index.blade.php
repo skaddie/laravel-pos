@@ -9,6 +9,18 @@
 <link rel="stylesheet" href="{{ asset('plugins/sweetalert2/sweetalert2.min.css') }}">
 @endsection
 @section('content')
+<style>
+
+    @media screen and (max-width: 600px) {
+    .hide_responsive {
+        white-space: nowrap;
+        font-size: 0.35rem;
+        }
+    .table th{
+        font-size: 0.55rem;
+        }    
+    }
+</style>
 <div class="card product-list">
     <div class="card-body" style="overflow-x:auto">
         <table class="table">
@@ -29,19 +41,19 @@
             <tbody>
                 @foreach ($products as $product)
                 <tr>
-                    <td>{{$product->id}}</td>
-                    <td>{{$product->name}}</td>
-                    <td><img class="product-img" src="{{ Storage::url($product->image) }}" alt=""></td>
-                    <td>{{$product->barcode}}</td>
-                    <td>{{$product->price}}</td>
-                    <td>{{$product->quantity}}</td>
-                    <td>
+                    <td class="hide_responsive">{{$product->id}}</td>
+                    <td class="hide_responsive">{{$product->name}}</td>
+                    <td class="hide_responsive"><img class="product-img" src="{{ Storage::url($product->image) }}" alt=""></td>
+                    <td class="hide_responsive">{{$product->barcode}}</td>
+                    <td class="hide_responsive">{{$product->price}}</td>
+                    <td class="hide_responsive">{{$product->quantity}}</td>
+                    <td class="hide_responsive">
                         <span
                             class="right badge badge-{{ $product->status ? 'success' : 'danger' }}">{{$product->status ? 'Active' : 'Inactive'}}</span>
                     </td>
-                    <td>{{$product->created_at}}</td>
-                    <td>{{$product->updated_at}}</td>
-                    <td>
+                    <td class="hide_responsive">{{$product->created_at}}</td>
+                    <td class="hide_responsive">{{$product->updated_at}}</td>
+                    <td class="hide_responsive">
                         <a href="{{ route('products.edit', $product) }}" class="btn btn-primary"><i
                                 class="fas fa-edit"></i></a>
                         <button class="btn btn-danger btn-delete" data-url="{{route('products.destroy', $product)}}"><i
