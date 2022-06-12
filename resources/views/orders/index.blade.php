@@ -13,7 +13,14 @@
 <style>
     .hide{
         border-top: 1px solid #dee2e600!important;
+        
+    }
+    @media screen and (max-width: 600px) {
+    .hide {
+        background-color: olive;
         white-space: nowrap;
+        font-size: 0.35rem;
+    }
     }
 </style>
 <div class="card">
